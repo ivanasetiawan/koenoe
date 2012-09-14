@@ -145,8 +145,8 @@ article
   background: #fff
 
   h2
-    margin-bottom: 15px
     font-size: 1.8em
+    margin-bottom: 15px
     font-weight: bold
     line-height: 1.2em
     text-transform: uppercase
@@ -157,15 +157,27 @@ article
   footer
     margin-top: 20px
     padding-top: 20px
+    overflow: hidden
     border-top: dotted 1px rgba(0, 0, 0, 0.15)
 
     time, .tags, .comments
+      height: 15px
       padding-left: 20px
-      display: inline-block
-      line-height: 25px
+      display: block
+      float: left
+      margin-left: 10px
+      line-height: 15px
+
+    time
+      margin-left: 0
+      +data-uri-bg("i-cal.png", no-repeat)
+
+    .comments
+      +data-uri-bg("i-comments.png", no-repeat)
 
     .tags
-      line-height: 7px
+      padding-left: 10px
+      +data-uri-bg("i-tag.png", no-repeat)
 
       li
         float: left
@@ -173,105 +185,3 @@ article
 
       a
         color: $fontColor
-
-//figure
-//  width: 68.5714%
-//  margin: 20px auto 30px
-//  text-align: center
-//
-//  &.config
-//    width: 39.7143%
-//
-//  &.compasswatch
-//    width: 78.5714%
-//
-//  &.each
-//    width: 82%
-//
-//  img
-//    +fleximage
-//    border: solid 5px rgba(0, 0, 0, 0.6)
-//
-//  figcaption
-//    font-size: 1.4em
-
-//h1, h2, h3
-//  +text-shadow(#000 1px 1px 1px)
-//
-//h2
-//  text-align: center
-//  margin: 60px 0 25px
-//  font-size: 3em
-//  font-weight: bold
-//  //font-family: $titleFont
-//
-//h3
-//  margin: 50px 0 0
-//  font-size: 2em
-//  font-weight: bold
-//  font-family: $titleFont
-//
-//header
-//  text-align: center
-//
-//  h1
-//    margin: 50px 0 25px -40px
-//    font-size: 12em
-//    font-weight: bold
-//    //font-family: $titleFont
-//    line-height: 1em
-//    color: transparent
-//    //+text-shadow(rgba(#fff, 0.15) 10px 10px 0, rgba(#fff, 0.4) 15px 15px 0, rgba(#fff, 1) 20px 20px 0, rgba(#000, 0.5) 22px 22px 0)
-//
-//  h2
-//    margin: 0 0 70px
-//    font-size: 2em
-//    //font-family: $titleFont
-//    opacity: 0.6
-
-//.content, .intro, footer
-//  p
-//    margin-bottom: 15px
-//    font-size: 1.7em
-//    line-height: 1.7em
-//
-//    .note
-//      font-size: 0.8824em
-//
-//  .note
-//    font-size: 1.5em
-//    color: #e7ffae
-//
-//.intro
-//  padding-bottom: 40px
-//  font-size: 1.3em
-//  border-bottom: dashed 1px rgba(white, 0.3)
-//
-//  .note
-//    font-size: 1.2em
-//
-//.letter
-//  display: inline-block
-//  margin: 16px 8px 0 0
-//  float: left
-//  font-size: 3.2em
-//  font-weight: 500
-//
-//.step-by-step
-//  ul
-//    margin: 0 0 15px 50px
-//    font-size: 1.5em
-//    list-style: disc outside
-//
-//footer
-//  margin-top: 80px !important
-//  padding: 30px 30px 20px
-//  text-align: center
-//  font-size: 0.8em
-//  border-top: dashed 1px rgba(white, 0.3)
-//
-//  p:last-child
-//    font-style: italic
-//    opacity: 0.5
-//    +text-shadow(black 1px 1px 1px)
-//
