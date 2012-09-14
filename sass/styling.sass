@@ -22,25 +22,23 @@
   height: auto
 
 // Variable
-$fontFamily: 'Enriqueta', Georgia, serif
-$titleFont: 'Coustard', cursive, Georgia, serif
-$fontColor: #fff
-$altColor: #b4ff00
-$bgColor: #0070b8
+$fontFamily: 'Quattrocento Sans', 'Segoe UI', Frutiger, 'Frutiger Linotype', sans-serif
+$fontColor: #777 // Grey
+$lightColor: #ff6600 // Orange
 
 ::-moz-selection
-  background: $altColor
+  background: $lightColor
   color: #111
   text-shadow: none
 
 ::selection
-  background: $altColor
+  background: $lightColor
   color: #111
   text-shadow: none
 
 a
   text-decoration: none
-  color: $altColor
+  color: $lightColor
 
   &:hover
     text-decoration: underline
@@ -51,7 +49,7 @@ code
   margin: 20px 0
   color: #fff
   font-family: Courier
-  font-size: 1.5em
+  font-size: 1em
   background: #111
   +border-radius(3px)
 
@@ -67,116 +65,212 @@ code
   .indent-2
     margin-left: 40px
 
-figure
-  width: 68.5714%
-  margin: 20px auto 30px
-  text-align: center
-
-  &.config
-    width: 39.7143%
-
-  &.compasswatch
-    width: 78.5714%
-
-  &.each
-    width: 82%
-
-  img
-    +fleximage
-    border: solid 5px rgba(0, 0, 0, 0.6)
-
-  figcaption
-    font-size: 1.4em
-
 body
+  padding-top: 100px
   font-family: $fontFamily
   /* The font-size is now 0.625 * 16px = 10px. */
   font-size: 0.625em
   /* The leading is now 25 pixels. */
   line-height: 2.5em
   color: $fontColor
-  background: $bgColor
+  background: url("../images/bg.jpg")
 
 .wrap
-  max-width: 700px
+  max-width: 1000px
+  position: relative
   margin: 0 auto
 
-h1, h2, h3
-  +text-shadow(#000 1px 1px 1px)
-
-h2
-  text-align: center
-  margin: 60px 0 25px
-  font-size: 3em
-  font-weight: bold
-  font-family: $titleFont
-
-h3
-  margin: 50px 0 0
-  font-size: 2em
-  font-weight: bold
-  font-family: $titleFont
-
-header
-  text-align: center
+#mainheader
+  width: 23%
+  top: 0
+  right: 0
+  position: absolute
 
   h1
-    margin: 50px 0 25px -40px
-    font-size: 12em
-    font-weight: bold
-    font-family: $titleFont
-    line-height: 1em
-    color: transparent
-    +text-shadow(rgba(#fff, 0.15) 10px 10px 0, rgba(#fff, 0.4) 15px 15px 0, rgba(#fff, 1) 20px 20px 0, rgba(#000, 0.5) 22px 22px 0)
+    margin-bottom: 20px
+    font-size: 2.4em
+    color: #fff
+
+    em
+      color: $lightColor
+
+    span
+      display: block
+      font-size: 0.4833em
+      text-transform: uppercase
+      color: #636364
 
   h2
-    margin: 0 0 70px
-    font-size: 2em
-    font-family: $titleFont
-    opacity: 0.6
+    padding: 20px 0
+    font-size: 1.2em
+    line-height: 1.6667em
+    color: #fff
+    border-top: solid 1px rgba(255, 255, 255, 0.15)
+    border-bottom: solid 1px rgba(255, 255, 255, 0.15)
 
-.content, .intro, footer
+.blogposts
+  width: 72.5%
+  float: left
+
+#mainaside
+  width: 23%
+  float: right
+  padding-top: 152px
+  font-size: 1.2em
+
+  h3
+    text-transform: uppercase
+
+  .block
+    padding: 20px 0
+    border-bottom: solid 1px rgba(255, 255, 255, 0.15)
+
+  a
+    color: #fff
+
+    &:hover
+      text-decoration: none
+      color: $lightColor
+
+.categories
+  ul
+    margin-left: 20px
+
+article
+  padding: 20px
+  margin-bottom: 50px
+  font-size: 1.2em
+  line-height: 1.6667em
+  background: #fff
+
+  h2
+    margin-bottom: 15px
+    font-size: 1.8em
+    font-weight: bold
+    line-height: 1.2em
+    text-transform: uppercase
+
   p
     margin-bottom: 15px
-    font-size: 1.7em
-    line-height: 1.7em
 
-    .note
-      font-size: 0.8824em
+  footer
+    margin-top: 20px
+    padding-top: 20px
+    border-top: dotted 1px rgba(0, 0, 0, 0.15)
 
-  .note
-    font-size: 1.5em
-    color: #e7ffae
+    time, .tags, .comments
+      padding-left: 20px
+      display: inline-block
+      line-height: 25px
 
-.intro
-  padding-bottom: 40px
-  font-size: 1.3em
-  border-bottom: dashed 1px rgba(white, 0.3)
+    .tags
+      line-height: 7px
 
-  .note
-    font-size: 1.2em
+      li
+        float: left
+        margin-left: 5px
 
-.letter
-  display: inline-block
-  margin: 16px 8px 0 0
-  float: left
-  font-size: 3.2em
-  font-weight: 500
+      a
+        color: $fontColor
 
-.step-by-step
-  ul
-    margin: 0 0 15px 50px
-    font-size: 1.5em
-    list-style: disc outside
+//figure
+//  width: 68.5714%
+//  margin: 20px auto 30px
+//  text-align: center
+//
+//  &.config
+//    width: 39.7143%
+//
+//  &.compasswatch
+//    width: 78.5714%
+//
+//  &.each
+//    width: 82%
+//
+//  img
+//    +fleximage
+//    border: solid 5px rgba(0, 0, 0, 0.6)
+//
+//  figcaption
+//    font-size: 1.4em
 
-footer
-  margin-top: 80px !important
-  padding: 30px 30px 20px
-  text-align: center
-  font-size: 0.8em
-  border-top: dashed 1px rgba(white, 0.3)
+//h1, h2, h3
+//  +text-shadow(#000 1px 1px 1px)
+//
+//h2
+//  text-align: center
+//  margin: 60px 0 25px
+//  font-size: 3em
+//  font-weight: bold
+//  //font-family: $titleFont
+//
+//h3
+//  margin: 50px 0 0
+//  font-size: 2em
+//  font-weight: bold
+//  font-family: $titleFont
+//
+//header
+//  text-align: center
+//
+//  h1
+//    margin: 50px 0 25px -40px
+//    font-size: 12em
+//    font-weight: bold
+//    //font-family: $titleFont
+//    line-height: 1em
+//    color: transparent
+//    //+text-shadow(rgba(#fff, 0.15) 10px 10px 0, rgba(#fff, 0.4) 15px 15px 0, rgba(#fff, 1) 20px 20px 0, rgba(#000, 0.5) 22px 22px 0)
+//
+//  h2
+//    margin: 0 0 70px
+//    font-size: 2em
+//    //font-family: $titleFont
+//    opacity: 0.6
 
-  p:last-child
-    font-style: italic
-    opacity: 0.5
-    +text-shadow(black 1px 1px 1px)
+//.content, .intro, footer
+//  p
+//    margin-bottom: 15px
+//    font-size: 1.7em
+//    line-height: 1.7em
+//
+//    .note
+//      font-size: 0.8824em
+//
+//  .note
+//    font-size: 1.5em
+//    color: #e7ffae
+//
+//.intro
+//  padding-bottom: 40px
+//  font-size: 1.3em
+//  border-bottom: dashed 1px rgba(white, 0.3)
+//
+//  .note
+//    font-size: 1.2em
+//
+//.letter
+//  display: inline-block
+//  margin: 16px 8px 0 0
+//  float: left
+//  font-size: 3.2em
+//  font-weight: 500
+//
+//.step-by-step
+//  ul
+//    margin: 0 0 15px 50px
+//    font-size: 1.5em
+//    list-style: disc outside
+//
+//footer
+//  margin-top: 80px !important
+//  padding: 30px 30px 20px
+//  text-align: center
+//  font-size: 0.8em
+//  border-top: dashed 1px rgba(white, 0.3)
+//
+//  p:last-child
+//    font-style: italic
+//    opacity: 0.5
+//    +text-shadow(black 1px 1px 1px)
+//
